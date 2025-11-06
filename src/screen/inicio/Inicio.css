@@ -1,0 +1,16 @@
+section.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px solid var(--accent-900);
+  h5{
+    text-align:end
+  }
+}
+section.card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--accent-700);
+}

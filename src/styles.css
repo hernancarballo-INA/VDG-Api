@@ -1,0 +1,274 @@
+/*..........ROOT.........*/
+:root {
+  --bg: #debc75;
+  --card: #ffffff;
+  --muted: #92ab45;
+  --accent: #59bc32;
+  --accent-700: #188f0b;
+  --accent-900: #dba81d;
+  --radius: 14px;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial, sans-serif;
+}
+/*........................*/
+* {
+  box-sizing: border-box;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+}
+.logo {
+  height: 50px;
+}
+
+
+/*............BODY..........*/
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #3d8c44 60%);
+  color: #0f2a1a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*..........HEADER...........*/
+header.clase-header {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--accent-700);
+}
+
+a {
+  text-decoration: none; 
+}
+
+nav a {
+  text-decoration: none;
+  color: #02330e;
+  font-weight: 600;
+}
+nav a:hover {
+  color: var(--accent-900);
+}
+/*......MAIN...........*/
+main {
+  flex: 1;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+button {
+  display: block;
+  margin: 20px auto 0 auto; /* arriba 20px, centrado horizontal */
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-700);
+}
+
+
+
+p {
+  line-height: 1.6;
+}
+
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*....................... imagen con transparencia*/
+#sobre {
+  position: relative;
+  background: url("imagenes/imagen\ venta\ de\ garage.JPG") no-repeat
+    center/cover;
+}
+
+#sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85); /* casi blanco transparente */
+  border-radius: var(--radius);
+}
+
+#sobre * {
+  position: relative;
+  z-index: 1;
+}
+/*.............RECURSOS..................*/
+.resource {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.resource h3 {
+  margin-top: 0;
+  color: var(--accent-700);
+}
+
+.resource-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/*...........MEDIA Q...........*/
+/* tablet */
+ @media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px; 
+} 
+
+}
+/*celular*/
+@media (max-width: 767px) {
+ .productos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px; 
+}
+} 
+/* 🔸 Contador del carrito */
+#cart-count {
+  background-color: var(--accent-900);
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 8px;
+  margin-left: 4px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+/*.........FOOTER............*/
+footer {
+  background: var(--accent-900);
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, íconos a la derecha */
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  display: flex;
+  align-items: center;
+}
+
+footer i {
+  font-size: 1.6rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer i:hover {
+  color: var(--accent-700);
+}
+
+/* 📱 versión responsive para tablets y móviles */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  footer ul {
+    justify-content: center;
+  }
+}
+/* 🔸 MENÚ HAMBURGUESA RESPONSIVE */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent-700);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Oculta menú y muestra el botón */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--card);
+    position: absolute;
+    top: 80px; /* debajo del header */
+    right: 20px;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 10;
+  }
+
+  .menu a {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* Cuando se activa */
+  .menu.active {
+    display: flex;
+  }
+
+  /* Ajuste header */
+  header.site-header {
+    position: relative;
+    flex-wrap: wrap;
+  }
+}

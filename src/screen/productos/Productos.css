@@ -1,0 +1,35 @@
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* tres columnas */
+  gap: 20px; /* espacio entre columnas y filas */
+}
+section.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px solid var(--accent-900);
+  h5{
+    text-align:end
+  }
+}
+section.card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--accent-700);
+}
+@media (max-width: 767px) {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
