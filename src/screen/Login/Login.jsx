@@ -1,9 +1,23 @@
-import React from 'react'
-import "./Contacto.css";
+import React, { useState } from 'react'
+import "./Login.css";
 import "../../styles.css";
 import { Link } from "react-router-dom";
+import { useAuth } from '../../contexts/AuthProvider';
 
-export default function Contacto() {
+export default function Login() {
+
+ const [email, setEmail] = useState("")
+ const [password, setPassword] = useState("")
+
+const {login} = useAuth()
+
+
+
+function enviarLogin() {
+  console.log("logeandose")
+  login({email,password})
+}
+
   return (
       <div>
  
@@ -37,26 +51,41 @@ export default function Contacto() {
 </header>
 
 <main>
-    
-    <section className="form-container">
-        
-    <form action="https://formsubmit.co/herni.soporte@gmail.com" method="POST">
-            <label htmlFor="nombreYapellido">Nombre y Apellido:</label>
-        <input type="text" id="nombre" name="nombre" required/>
-        
-        <label htmlFor="celular">Celular:</label>
-        <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" placeholder="(11)00000000" required/>
-        
-        <label htmlFor="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="correo@gmail.com" required/>
-        
-        <label htmlFor="comentario">Comentario:</label>
-        <textarea id="comentario" name="comentario" placeholder="Hazme tu consulta..." required></textarea>
-        
-        <input type="submit" value="Enviar"/>
-    </form>
-</section>
-</main>
+        <section className="form-container">
+
+          {/* 🔥 FORMULARIO LOGIN SIMPLE */}
+          <div className="login-form">
+            <h2>Iniciar Sesión</h2>
+
+            <label htmlFor="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
+              name="email"
+              placeholder="correo@gmail.com"
+              required
+            />
+
+            <label htmlFor="password">Contraseña:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)}
+              name="password"
+              placeholder="********"
+              required
+            />
+
+            <button onClick={enviarLogin}>enviar</button>
+
+          </div>
+
+        </section>
+      </main>
+
    
 <footer>
     <p>

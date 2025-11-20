@@ -2,37 +2,41 @@ import React from "react";
 import "./Inicio.css";
 import "../../styles.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthProvider";
 
 export default function Inicio() {
+const {autenticado}= useAuth()
+
+  console.log("logeado: ",autenticado);
+
   return (
     <div>
       <header className="clase-header">
         <div className="branding">
-          <a href="../Inicio/index.html">
-            <img src="./imagenes/logoVDG.png" alt="Logo VDG" className="logo" />
-          </a>
+          {/* <a href="../Inicio/index.html"> */}
+          <img src="./imagenes/logoVDG.png" alt="Logo VDG" className="logo" />
+          {/* </a> */}
           <h1>VDG.cheap</h1>
         </div>
-
         <button className="menu-toggle" aria-label="Abrir menú">
           <i className="bx bx-menu"></i>
         </button>
-
         <nav className="menu">
           <Link to="/">
             <i className="bx bx-home"></i>Inicio
           </Link>
-          <Link to= "/productos">
+          <Link to="/productos">
             <i className="bx bx-shopping-bag"></i>Productos
           </Link>
-          <Link to= "/Carrito">
+          <Link to="/Carrito">
             <i className="bx bx-cart"></i>
             <span id="cart-count">0</span> Ver Carrito
           </Link>
-          <Link to= "/contacto">
+          <Link to="/contacto">
             <i className="bx bx-mail-send"></i>Formulario
           </Link>
-        </nav>t 
+        </nav>
+        
       </header>
 
       <main>
@@ -56,9 +60,9 @@ export default function Inicio() {
               <strong>No sucios o rotos.</strong> Se entiende que los articulos
               antiguos tengan desgastes propios del uso y el paso de los años.
             </p>
-            <a href="../productos/productos.html">
-              <button>Ver productos</button>
-            </a>
+            {/* <a href="../productos/productos.html"> */}
+            <button>Ver productos</button>
+            {/* </a> */}
           </section>
 
           <section className="card">
@@ -82,9 +86,9 @@ export default function Inicio() {
               <li>🛠️ Detalles adicionales (desgastes).</li>
             </ul>
 
-            <a href="../contacto/contacto.html">
-              <h5>👉​Enlace al Formulario</h5>
-            </a>
+            {/* <a href="../contacto/contacto.html"> */}
+            <h5>👉​Enlace al Formulario</h5>
+            {/* </a> */}
           </section>
         </div>
 
@@ -101,7 +105,7 @@ export default function Inicio() {
           </div>
           <div className="resource">
             <img
-              src="./imagenes/folletovdg.png"
+              src="../imagenes/folletovdg.png"
               alt="folletovdg"
               className="resource-img"
             />

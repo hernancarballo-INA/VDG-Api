@@ -1,13 +1,14 @@
 import React from 'react'
 import "./Carrito.css";
 import "../../styles.css";
+import { Link } from "react-router-dom";
 
 export default function 
 () {
   return (
     <div>
         
-<header className="site-header">
+<header className="clase-header">
   <div className="branding">
     <a href="../Inicio/index.html"><img src="../imagenes/logoVDG.png" alt="Logo VDG" className="logo" /></a>
     <h1>VDG.cheap</h1>
@@ -20,13 +21,20 @@ export default function
 
  
   <nav className="menu">
-    <a href="../Inicio/index.html"><i className="bx bx-home"></i>Inicio</a>
-    <a href="../productos/productos.html"><i className="bx bx-shopping-bag"></i>Productos</a>
-    <a href="../carrito/carrito.html" className="cart-link">
-      <i className="bx bx-cart"></i><span id="cart-count">0</span> Ver Carrito
-    </a>
-    <a href="../contacto/contacto.html"><i className="bx bx-mail-send"></i>Formulario</a>
-  </nav>
+          <Link to="/">
+            <i className="bx bx-home"></i>Inicio
+          </Link>
+          <Link to= "/productos">
+            <i className="bx bx-shopping-bag"></i>Productos
+          </Link>
+          <Link to= "/Carrito">
+            <i className="bx bx-cart"></i>
+            <span id="cart-count">0</span> Ver Carrito
+          </Link>
+          <Link to= "/contacto">
+            <i className="bx bx-mail-send"></i>Formulario
+          </Link>
+        </nav>
 </header>
 
 
