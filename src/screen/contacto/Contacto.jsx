@@ -2,39 +2,13 @@ import React from 'react'
 import "./Contacto.css";
 import "../../styles.css";
 import { Link } from "react-router-dom";
+import Header from '../../components/Header';
 
 export default function Contacto() {
   return (
       <div>
  
-      <header className="clase-header">
-  <div className="branding">
-    {/* <a href="../Inicio/index.html"><img src="./imagenes/logoVDG.png" alt="Logo VDG" className="logo" /></a> */}
-    <h1>VDG.cheap</h1>
-  </div>
-
-  
-  <button className="menu-toggle" aria-label="Abrir menú">
-    <i className="bx bx-menu"></i>
-  </button>
-
-  
-   <nav className="menu">
-          <Link to="/">
-            <i className="bx bx-home"></i>Inicio
-          </Link>
-          <Link to= "/productos">
-            <i className="bx bx-shopping-bag"></i>Productos
-          </Link>
-          <Link to= "/Carrito">
-            <i className="bx bx-cart"></i>
-            <span id="cart-count">0</span> Ver Carrito
-          </Link>
-          <Link to= "/contacto">
-            <i className="bx bx-mail-send"></i>Formulario
-          </Link>
-        </nav>
-</header>
+ <Header/>
 
 <main>
     
