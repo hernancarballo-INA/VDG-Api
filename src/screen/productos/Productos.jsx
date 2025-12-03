@@ -29,29 +29,29 @@ useEffect(() => {
 
 
        {
-        productos.map( producto => (
-          <section className="card" key={producto.id}>
-            <article className="prop-card">
-              <img src={producto.image}style={{width:"300px"}} />
-              <div className="info">
-                <h3>{producto.name}</h3>
-                <p>{producto.new ? "nuevo":"usado en buen estado"}</p>
-                <p>{producto.description}</p>
-                <span className="price">$ {producto.price}</span>
-                <button
-                  className="add-to-cart"
-                  data-name="Producto 1"
-                  data-price="320000"
-                  data-img="./imagenes/antiques.jpg"
-                >
-                  Agregar al carrito
-                </button>
-              </div>
-            </article>
-          </section>
+  productos.map((producto) => (
+    <section className="card" key={producto.id}>
+      <article className="prop-card">
+        <img src={producto.image} alt={producto.name} className="product-img" />
+        <div className="info">
+          <h3>{producto.name}</h3>
+          <p>{producto.new ? "nuevo" : "usado en buen estado"}</p>
+          <p>{producto.description}</p>
+          <span className="price">$ {producto.price}</span>
+          <button
+            className="add-to-cart"
+            data-name={producto.name}
+            data-price={producto.price}
+            data-img={producto.image}
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </article>
+    </section>
+  ))
+}
 
-        ))
-       }
 
         </section>
       </main>

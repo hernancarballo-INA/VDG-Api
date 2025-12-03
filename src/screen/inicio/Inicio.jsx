@@ -14,79 +14,68 @@ const {autenticado}= useAuth()
     <div>
       <Header/>
 
-      <main>
-        <div>
-          <section className="card">
-            <h2>Sobre nosotros</h2>
-            <p>
-              Venta de Garage app busca poder llegar a más personas que quieran
-              vender o comprar articulos nuevos o usados en buen estado.{" "}
-              <strong>¿NO TENÉS TIEMPO?</strong> nosotros publicamos y
-              publicitamos tu articulo hasta su venta. Contamos con varios
-              canales de venta, grupos de WhatsApp, marketplace y clasificados.
-            </p>
-          </section>
+  <main className="inicio-layout">
 
-          <section className="card">
-            <h2>Productos y Articulos</h2>
-            <p>
-              Los productos y/o articulos para la venta deberán estar nuevos o
-              usados en buen estado de conservación,
-              <strong>No sucios o rotos.</strong> Se entiende que los articulos
-              antiguos tengan desgastes propios del uso y el paso de los años.
-            </p>
-            {/* <a href="../productos/productos.html"> */}
-            <button>Ver productos</button>
-            {/* </a> */}
-          </section>
+  <div className="inicio-content">
 
-          <section className="card">
-            <h2>Contactanos</h2>
-            <p>
-              ¿Tenés cosas para vender? Completá el formulario o Escribinos a
-              <a href="mail de contacto">vdg.cheap@outlook.com.ar</a> dejanos tu
-              consulta y te responderemos a la brevedad.{" "}
-            </p>
-            <p>
-              <strong>IMPORTANTE!!!</strong> No olvides decirnos:
-            </p>
-            <ul>
-              {" "}
-              <li>📍 Donde se encuentra el artículo.</li>
-              <li>🆕 / 🔄 Estado (nuevo o usado).</li>
-              <li>📏 Medidas (ancho, largo y alto).</li>
-              <li>
-                🚚 / 🤝 Si realiza entrega a domicilio y/o punto de encuentro.
-              </li>
-              <li>🛠️ Detalles adicionales (desgastes).</li>
-            </ul>
+    <section className="card">
+      <h2>Sobre nosotros</h2>
+      <p>
+        Venta de Garage app busca poder llegar a más personas que quieran
+        vender o comprar articulos nuevos o usados en buen estado.{" "}
+        <strong>¿NO TENÉS TIEMPO?</strong> nosotros publicamos y
+        publicitamos tu articulo hasta su venta.
+      </p>
+    </section>
 
-            {/* <a href="../contacto/contacto.html"> */}
-            <h5>👉​Enlace al Formulario</h5>
-            {/* </a> */}
-          </section>
-        </div>
+    <section className="card">
+      <h2>Productos y Artículos</h2>
+      <p>
+        Los productos y/o artículos para la venta deberán estar nuevos o
+        usados en buen estado de conservación,
+        <strong>No sucios o rotos.</strong>
+      </p>
+    </section>
 
-        <aside>
-          <div className="resource">
-            <h3>
-              <strong>¿A cuanto vender?</strong>
-            </h3>
-            <p>
-              El precio de venta lo estipulamos en base al estado del mismo,
-              comparando con <strong> articulos o productos similares</strong>
-              Aceptamos efectivo, transferencia o mercado pago.
-            </p>
-          </div>
-          <div className="resource">
-            <img
-              src="../imagenes/folletovdg.png"
-              alt="folletovdg"
-              className="resource-img"
-            />
-          </div>
-        </aside>
-      </main>
+    <section className="card">
+      <h2>Contactanos</h2>
+      <p>
+        ¿Tenés cosas para vender? Completá el formulario o escribinos a
+        <a href="mail to:vdg.cheap@outlook.com.ar"> vdg.cheap@outlook.com.ar</a>.
+      </p>
+      <ul>
+        <li>📍 Dónde se encuentra el artículo.</li>
+        <li>🆕 / 🔄 Estado (nuevo o usado).</li>
+        <li>📏 Medidas.</li>
+        <li>🚚 / 🤝 Entrega o punto de encuentro.</li>
+        <li>🛠️ Detalles adicionales.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <aside className="inicio-aside">
+
+    <div className="resource">
+      <h3><strong>¿A cuánto vender?</strong></h3>
+      <p>
+        El precio lo estipulamos comparando con
+        <strong> artículos similares.</strong>
+      </p>
+    </div>
+
+    <div className="resource">
+      <img
+        src="../imagenes/folletovdg.png"
+        alt="folletovdg"
+        className="resource-img"
+      />
+    </div>
+
+  </aside>
+
+</main>
+
 
       <footer>
         <p>

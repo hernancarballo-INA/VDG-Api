@@ -39,4 +39,57 @@ input[type="submit"]:hover {
     background-color: #0a5a07a2;
     color: rgb(255, 254, 254);
 } 
+/*...................*/
+/* Mobile L — 425px */
+@media (max-width: 425px) {
+    .form-container {
+        padding: 20px;
+        max-width: 360px;
+        margin: 16px auto;
+    }
+
+    form {
+        max-width: 320px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile M — 375px */
+@media (max-width: 375px) {
+    .form-container {
+        padding: 16px;
+        max-width: 330px;
+        margin: 12px auto;
+    }
+
+    form {
+        max-width: 300px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        padding: 9px;
+        font-size: 15px;
+    }
+}
+
 

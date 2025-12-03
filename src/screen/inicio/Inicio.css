@@ -14,3 +14,101 @@ section.card h2 {
   text-align: center;
   color: var(--accent-700);
 }
+/*......................*/
+@media (max-width: 425px) {
+    section.card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    section.card {
+        padding: 14px;
+    }
+
+    section.card h2 {
+        font-size: 18px;
+    }
+}
+/*--------------*/
+/* ----- ESTRUCTURA GENERAL ----- */
+.inicio-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.inicio-content {
+    flex: 2;
+    min-width: 0;
+}
+
+.inicio-aside {
+    flex: 1;
+    min-width: 260px;
+}
+
+.resource {
+    background: var(--card);
+    padding: 16px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    border: 2px solid var(--accent-900);
+    box-shadow: var(--shadow);
+}
+
+.resource-img {
+    width: 100%;
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+/* ---------- MOBILE L (425px) ---------- */
+@media (max-width: 425px) {
+
+    .inicio-layout {
+        flex-direction: column;
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .inicio-aside {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .resource-img {
+        max-width: 220px;
+    }
+
+    section.card {
+        padding: 16px;
+    }
+}
+
+
+/* ---------- MOBILE M (375px) ---------- */
+@media (max-width: 375px) {
+
+    .inicio-layout {
+        padding: 10px;
+    }
+
+    .resource-img {
+        max-width: 180px;
+    }
+
+    section.card {
+        padding: 14px;
+    }
+
+    section.card h2 {
+        font-size: 18px;
+    }
+}
+

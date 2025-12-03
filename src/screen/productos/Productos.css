@@ -1,3 +1,12 @@
+/* Tamaño base para todas las imágenes de productos */
+.product-img {
+    width: 100%;
+    max-width: 260px;   /* Ajustable */
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto 12px;
+}
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* tres columnas */
@@ -31,5 +40,57 @@ section.card h2 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+    }
+}
+/*....................*/
+/* mejorar gaps / paddings en móviles */
+@media (max-width: 425px) {
+    .productos {
+        gap: 16px;
+    }
+
+    section.card {
+        padding: 16px;
+    }
+
+    section.card h5 {
+        font-size: 14px;
+    }
+
+    .product-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        display: block;
+        margin: 0 auto 12px;
+    }
+
+    .prop-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .productos {
+        gap: 14px;
+    }
+
+    section.card {
+        padding: 14px;
+    }
+
+    section.card h2 {
+        font-size: 18px;
+    }
+
+    .product-img {
+        max-width: 240px;
     }
 }

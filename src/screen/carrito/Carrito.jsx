@@ -1,46 +1,62 @@
-import React from 'react'
+import React from "react";
 import "./Carrito.css";
 import "../../styles.css";
 import { Link } from "react-router-dom";
-import Header from '../../components/Header';
+import Header from "../../components/Header";
 
-export default function 
-() {
+export default function () {
   return (
     <div>
-        
- <Header/>
+      <Header />
 
+      <main style={{ minHeight: "100vh" }}>
 
-<main className="cart-container">
-  <h2><i className="bx bx-cart"></i> Carrito de Compras</h2>
+       <div  className="cart-container">
+        <h2>
+          <i className="bx bx-cart"></i> Carrito de Compras
+        </h2>
 
-  <section className="cart-items" id="cart-items">
-   
-  </section>
+        <section className="cart-items" id="cart-items"></section>
 
-  <section className="cart-summary">
-    <h3>Resumen</h3>
-    <p>Total: <span id="cart-total">$0</span></p>
-    <button id="checkout-btn">Finalizar Compra</button>
-  </section>
-</main>
+        <section className="cart-summary">
+          <h3>Resumen</h3>
+          <p>
+            Total: <span id="cart-total">$0</span>
+          </p>
+          <button id="checkout-btn">Finalizar Compra</button>
+        </section>
+        </div>
+      </main>
 
-
-
-
-  <footer>
-    <p><strong>VDG.cheap &copy; 2025 Todos los derechos reservados</strong></p>
-    <ul>
-      <li>Seguinos en:</li>
-      <li><a href="https://www.facebook.com/ventadegarage.cheap" target="_blank"><i className="bx bxl-facebook-circle"></i></a></li>
-      <li><a href="https://www.instagram.com/ventadegarage.cheap/" target="_blank"><i className="bx bxl-instagram"></i></a></li>
-      <li><a href="https://wa.me/1160350674" target="_blank"><i className="bx bxl-whatsapp"></i></a></li>
-    </ul>
-  </footer>
-
-
-
+      <footer>
+        <p>
+          <strong>VDG.cheap &copy; 2025 Todos los derechos reservados</strong>
+        </p>
+        <ul>
+          <li>Seguinos en:</li>
+          <li>
+            <a
+              href="https://www.facebook.com/ventadegarage.cheap"
+              target="_blank"
+            >
+              <i className="bx bxl-facebook-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ventadegarage.cheap/"
+              target="_blank"
+            >
+              <i className="bx bxl-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/1160350674" target="_blank">
+              <i className="bx bxl-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
-  )
+  );
 }
