@@ -1,4 +1,4 @@
-section.card {
+/* section.card {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -13,14 +13,14 @@ section.card h2 {
   margin-top: 0;
   text-align: center;
   color: var(--accent-700);
-}
+} */
 /*......................*/
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
     section.card {
         padding: 16px;
     }
-}
-
+} */
+/* 
 @media (max-width: 375px) {
     section.card {
         padding: 14px;
@@ -29,16 +29,16 @@ section.card h2 {
     section.card h2 {
         font-size: 18px;
     }
-}
+} */
 /*--------------*/
 /* ----- ESTRUCTURA GENERAL ----- */
-.inicio-layout {
+/* .inicio-layout {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
-}
+} */
 
 .inicio-content {
     flex: 2;
@@ -58,18 +58,29 @@ section.card h2 {
     border: 2px solid var(--accent-900);
     box-shadow: var(--shadow);
 }
-
-.resource-img {
-    width: 100%;
-    max-width: 260px;
-    display: block;
-    margin: 0 auto;
-    height: auto;
+main {
+  flex: 1;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  /* display: grid; */
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
 }
+
+ /* .resource-img {
+   /* width: 93%; */
+    /* max-width: 260px; */
+    /* display: block; */
+    /* margin: auto; */
+    /* height: auto; 
+}  */
 
 
 /* ---------- MOBILE L (425px) ---------- */
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
 
     .inicio-layout {
         flex-direction: column;
@@ -84,23 +95,25 @@ section.card h2 {
 
     .resource-img {
         max-width: 220px;
+        margin: auto;
     }
 
     section.card {
         padding: 16px;
     }
-}
+} */
 
 
 /* ---------- MOBILE M (375px) ---------- */
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
 
     .inicio-layout {
         padding: 10px;
     }
 
     .resource-img {
-        max-width: 180px;
+        max-width: 220px;
+        
     }
 
     section.card {
@@ -111,4 +124,4 @@ section.card h2 {
         font-size: 18px;
     }
 }
-
+ */

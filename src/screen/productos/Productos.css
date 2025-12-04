@@ -12,7 +12,7 @@
   grid-template-columns: repeat(3, 1fr); /* tres columnas */
   gap: 20px; /* espacio entre columnas y filas */
 }
-section.card {
+/* section.card {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -27,7 +27,7 @@ section.card h2 {
   margin-top: 0;
   text-align: center;
   color: var(--accent-700);
-}
+} */
 @media (max-width: 767px) {
     .productos {
         display: grid;
@@ -44,7 +44,7 @@ section.card h2 {
 }
 /*....................*/
 /* mejorar gaps / paddings en móviles */
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
     .productos {
         gap: 16px;
     }
@@ -93,4 +93,4 @@ section.card h2 {
     .product-img {
         max-width: 240px;
     }
-}
+} */

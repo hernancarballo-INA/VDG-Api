@@ -34,18 +34,18 @@ body {
   min-height: 100vh;
 }
 /*..........HEADER...........*/
-header.clase-header {
+/* header.clase-header {
   background: var(--card);
   box-shadow: var(--shadow);
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 header h1 {
   margin: 0;
   font-size: 1.3rem;
-  color: var(--accent-700);
+  color: var(--card);
 }
 
 a {
@@ -60,18 +60,64 @@ nav a {
 nav a:hover {
   color: var(--accent-900);
 }
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    color: rgb(253, 253, 250)
+  
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f8f6f6;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+section.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px solid var(--accent-900);
+  h5{
+    text-align:end
+  }
+}
+section.card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--accent-700);
+}
+
+.form-container {
+    background: #235c25;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+} 
+
+
 /*......MAIN...........*/
-main {
+/* main {
   flex: 1;
   padding: 40px;
   max-width: 1200px;
   margin: auto;
-  /* display: grid; */
+  /* display: grid; 
   display: flex;
   justify-content: center;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
-}
+} */
 button {
   display: block;
   margin: 20px auto 0 auto; /* arriba 20px, centrado horizontal */
@@ -133,33 +179,23 @@ aside {
 }
 
 .resource-img {
-  width: 100%;
+  width: 98%;
   height: auto;
   border-radius: var(--radius);
   display: block;
+  margin: auto;
 }
 
-/*...........MEDIA Q...........*/
-/* tablet */
- @media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  .productos {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px; 
-} 
 
-}
+
 /*celular*/
-@media (max-width: 767px) {
- .productos {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px; 
-}
-} 
+/* @media (max-width: 767px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; 
+  }
+}  */
 /* 🔸 Contador del carrito */
 #cart-count {
   background-color: var(--accent-900);
@@ -211,35 +247,18 @@ footer i:hover {
   color: var(--accent-700);
 }
 
-/* 📱 versión responsive para tablets y móviles */
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-  }
 
-  footer ul {
-    justify-content: center;
-  }
-}
 /* 🔸 MENÚ HAMBURGUESA RESPONSIVE */
-.menu-toggle {
+/* .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 2rem;
   color: var(--accent-700);
   cursor: pointer;
-}
+} */
 
-@media (max-width: 768px) {
-  /* Oculta menú y muestra el botón */
-  .menu-toggle {
-    display: block;
-  }
-
+  
   .menu {
     display: none;
     flex-direction: column;
@@ -253,24 +272,96 @@ footer i:hover {
     padding: 15px;
     z-index: 10;
   }
-
+  
   .menu a {
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  
   .menu a:last-child {
     border-bottom: none;
   }
-
+  
   /* Cuando se activa */
   .menu.active {
     display: flex;
   }
-
+  
   /* Ajuste header */
   header.site-header {
     position: relative;
     flex-wrap: wrap;
   }
+
+
+/*...........MEDIA Q..................................................................................*/
+
+/* tablet y desktop */
+ @media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px; 
+} 
+ footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  footer ul {
+    justify-content: center;
+  }
+
 }
+/* ---------- MOBILE L (425px) ---------- */
+@media (max-width: 425px) {
+
+    .inicio-layout {
+        flex-direction: column;
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .inicio-aside {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .resource-img {
+        max-width: 220px;
+        margin: auto;
+    }
+
+    section.card {
+        padding: 16px;
+    }
+}
+
+
+/* ---------- MOBILE M (375px) ---------- */
+@media (max-width: 375px) {
+
+    .inicio-layout {
+        padding: 10px;
+    }
+
+    .resource-img {
+        max-width: 220px;
+        
+    }
+
+    section.card {
+        padding: 14px;
+    }
+
+    section.card h2 {
+        font-size: 18px;
+    }
+}
+
+
