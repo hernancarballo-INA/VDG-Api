@@ -1,127 +1,28 @@
-/* section.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 30px;
-  border: 2px solid var(--accent-900);
-  h5{
-    text-align:end
-  }
-}
-section.card h2 {
-  margin-top: 0;
-  text-align: center;
-  color: var(--accent-700);
-} */
-/*......................*/
-/* @media (max-width: 425px) {
-    section.card {
-        padding: 16px;
-    }
-} */
-/* 
-@media (max-width: 375px) {
-    section.card {
-        padding: 14px;
-    }
-
-    section.card h2 {
-        font-size: 18px;
-    }
-} */
-/*--------------*/
-/* ----- ESTRUCTURA GENERAL ----- */
-/* .inicio-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-} */
-
 .inicio-content {
-    flex: 2;
-    min-width: 0;
+  flex: 2;
+  min-width: 0;
 }
 
 .inicio-aside {
-    flex: 1;
-    min-width: 260px;
+  flex: 1;
+  min-width: 260px;
 }
 
 .resource {
-    background: var(--card);
-    padding: 16px;
-    border-radius: var(--radius);
-    margin-bottom: 20px;
-    border: 2px solid var(--accent-900);
-    box-shadow: var(--shadow);
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  border: 2px solid var(--accent-900);
+  box-shadow: var(--shadow);
 }
 main {
   flex: 1;
   padding: 40px;
   max-width: 1200px;
   margin: auto;
-  /* display: grid; */
   display: flex;
   justify-content: center;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
 }
-
- /* .resource-img {
-   /* width: 93%; */
-    /* max-width: 260px; */
-    /* display: block; */
-    /* margin: auto; */
-    /* height: auto; 
-}  */
-
-
-/* ---------- MOBILE L (425px) ---------- */
-/* @media (max-width: 425px) {
-
-    .inicio-layout {
-        flex-direction: column;
-        padding: 12px;
-        gap: 16px;
-    }
-
-    .inicio-aside {
-        width: 100%;
-        min-width: auto;
-    }
-
-    .resource-img {
-        max-width: 220px;
-        margin: auto;
-    }
-
-    section.card {
-        padding: 16px;
-    }
-} */
-
-
-/* ---------- MOBILE M (375px) ---------- */
-/* @media (max-width: 375px) {
-
-    .inicio-layout {
-        padding: 10px;
-    }
-
-    .resource-img {
-        max-width: 220px;
-        
-    }
-
-    section.card {
-        padding: 14px;
-    }
-
-    section.card h2 {
-        font-size: 18px;
-    }
-}
- */

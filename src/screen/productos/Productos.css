@@ -1,96 +1,28 @@
 /* Tamaño base para todas las imágenes de productos */
 .product-img {
-    width: 100%;
-    max-width: 260px;   /* Ajustable */
-    height: auto;
-    display: block;
-    object-fit: cover;
-    margin: 0 auto 12px;
+  width: 100%;
+  max-width: 260px; /* Ajustable */
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto 12px;
 }
 .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* tres columnas */
   gap: 20px; /* espacio entre columnas y filas */
 }
-/* section.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 30px;
-  border: 2px solid var(--accent-900);
-  h5{
-    text-align:end
-  }
-}
+
 section.card h2 {
   margin-top: 0;
   text-align: center;
   color: var(--accent-700);
-} */
-@media (max-width: 767px) {
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-@media (max-width: 480px) {
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-}
-/*....................*/
-/* mejorar gaps / paddings en móviles */
-/* @media (max-width: 425px) {
-    .productos {
-        gap: 16px;
-    }
-
-    section.card {
-        padding: 16px;
-    }
-
-    section.card h5 {
-        font-size: 14px;
-    }
-
-    .product-img {
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-        display: block;
-        margin: 0 auto 12px;
-    }
-
-    .prop-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .info {
-        text-align: center;
-    }
 }
 
-@media (max-width: 375px) {
-    .productos {
-        gap: 14px;
-    }
-
-    section.card {
-        padding: 14px;
-    }
-
-    section.card h2 {
-        font-size: 18px;
-    }
-
-    .product-img {
-        max-width: 240px;
-    }
-} */
+ @media (max-width: 425px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+} 

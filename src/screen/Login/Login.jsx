@@ -24,11 +24,12 @@ function enviarLogin() {
 <Header/>
 
 <main>
+  
         <section className="form-container">
 
-          {/* 🔥 FORMULARIO LOGIN SIMPLE */}
+          {/* FORMULARIO LOGIN SIMPLE */}
           <div className="login-form">
-            <h2>Iniciar Sesión</h2>
+            <h2 >Iniciar Sesión</h2>
 
             <label htmlFor="email">Correo electrónico:</label>
             <input
@@ -41,7 +42,7 @@ function enviarLogin() {
               required
             />
 
-            <label htmlFor="password">Contraseña:</label>
+            <label htmlFor="password">Contraseña:     </label>
             <input
               type="password"
               id="password"

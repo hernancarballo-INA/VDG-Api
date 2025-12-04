@@ -23,7 +23,6 @@
   height: 50px;
 }
 
-
 /*............BODY..........*/
 body {
   margin: 0;
@@ -33,15 +32,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-/*..........HEADER...........*/
-/* header.clase-header {
-  background: var(--card);
-  box-shadow: var(--shadow);
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
+
 header h1 {
   margin: 0;
   font-size: 1.3rem;
@@ -49,7 +40,7 @@ header h1 {
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 nav a {
@@ -62,21 +53,21 @@ nav a:hover {
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    color: rgb(253, 253, 250)
-  
+  max-width: 400px;
+  /* margin: 0 auto; */
+  color: rgb(253, 250, 252);
 }
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #f8f6f6;
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f8f6f6;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 section.card {
   background: var(--card);
@@ -85,8 +76,8 @@ section.card {
   padding: 20px;
   margin-bottom: 30px;
   border: 2px solid var(--accent-900);
-  h5{
-    text-align:end
+  h5 {
+    text-align: end;
   }
 }
 section.card h2 {
@@ -96,28 +87,20 @@ section.card h2 {
 }
 
 .form-container {
-    background: #235c25;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 420px;
-    box-sizing: border-box;
-} 
-
-
-/*......MAIN...........*/
-/* main {
-  flex: 1;
+  background: #235c25;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-  /* display: grid; 
-  display: flex;
-  justify-content: center;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-} */
+  width: 800px;
+  /* max-width: 500px; */
+  min-width: 550px;
+  box-sizing: border-box;
+}
+.formu {
+  width: 800px;
+  max-width: 500px;
+}
+
 button {
   display: block;
   margin: 20px auto 0 auto; /* arriba 20px, centrado horizontal */
@@ -135,12 +118,9 @@ button:hover {
   background-color: var(--accent-700);
 }
 
-
-
 p {
   line-height: 1.6;
 }
-
 
 aside {
   display: flex;
@@ -186,16 +166,6 @@ aside {
   margin: auto;
 }
 
-
-
-/*celular*/
-/* @media (max-width: 767px) {
-  .productos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px; 
-  }
-}  */
 /* 🔸 Contador del carrito */
 #cart-count {
   background-color: var(--accent-900);
@@ -247,121 +217,99 @@ footer i:hover {
   color: var(--accent-700);
 }
 
-
-/* 🔸 MENÚ HAMBURGUESA RESPONSIVE */
-/* .menu-toggle {
+.menu {
   display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--accent-700);
-  cursor: pointer;
-} */
+  flex-direction: column;
+  background: var(--card);
+  position: absolute;
+  top: 80px; /* debajo del header */
+  right: 20px;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 10;
+}
 
-  
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: var(--card);
-    position: absolute;
-    top: 80px; /* debajo del header */
-    right: 20px;
-    width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    z-index: 10;
-  }
-  
-  .menu a {
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu a:last-child {
-    border-bottom: none;
-  }
-  
-  /* Cuando se activa */
-  .menu.active {
-    display: flex;
-  }
-  
-  /* Ajuste header */
-  header.site-header {
-    position: relative;
-    flex-wrap: wrap;
-  }
+.menu a {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
+.menu a:last-child {
+  border-bottom: none;
+}
+
+/* Cuando se activa */
+.menu.active {
+  display: flex;
+}
+
+/* Ajuste header */
+header.site-header {
+  position: relative;
+  flex-wrap: wrap;
+}
 
 /*...........MEDIA Q..................................................................................*/
 
-/* tablet y desktop */
- @media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  .productos {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px; 
-} 
- footer {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-  }
-  
-  footer ul {
-    justify-content: center;
-  }
-
-}
 /* ---------- MOBILE L (425px) ---------- */
 @media (max-width: 425px) {
+  .inicio-layout {
+    flex-direction: column;
+    padding: 12px;
+    gap: 16px;
+  }
 
-    .inicio-layout {
-        flex-direction: column;
-        padding: 12px;
-        gap: 16px;
-    }
+  .inicio-aside {
+    width: 100%;
+    min-width: auto;
+  }
 
-    .inicio-aside {
-        width: 100%;
-        min-width: auto;
-    }
+  .resource-img {
+    max-width: 220px;
+    margin: auto;
+  }
 
-    .resource-img {
-        max-width: 220px;
-        margin: auto;
-    }
-
-    section.card {
-        padding: 16px;
-    }
+  section.card {
+    padding: 16px;
+  }
+    .formu {
+    width: 320px;
+    max-width: 350px;
+  }
+  .form-container {
+  width: 500px;
+  min-width: 350px;
+  
 }
-
+}
 
 /* ---------- MOBILE M (375px) ---------- */
 @media (max-width: 375px) {
+  .inicio-layout {
+    padding: 10px;
+  }
 
-    .inicio-layout {
-        padding: 10px;
-    }
+  .resource-img {
+    max-width: 220px;
+  }
 
-    .resource-img {
-        max-width: 220px;
-        
-    }
+  section.card {
+    padding: 14px;
+  }
 
-    section.card {
-        padding: 14px;
-    }
+  section.card h2 {
+    font-size: 18px;
+  }
 
-    section.card h2 {
-        font-size: 18px;
-    }
+  .formu {
+    width: 320px;
+    max-width: 350px;
+  }
+  .form-container {
+  width: 500px;
+  min-width: 350px;
+  
 }
-
-
+}
